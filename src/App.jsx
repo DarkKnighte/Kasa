@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.scss'
+import React from "react";
+import "./styles/App.scss";
+import Card from "./component/cards";
+import Banner from "./component/Banner";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    const cardsData = [
+        { title: "Card 1", image: "/path/to/image1.jpg", description: "Description for Card 1" },
+        { title: "Card 2", image: "/path/to/image2.jpg", description: "Description for Card 2" },
+    ];
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    return (
+        <div className="app">
+            <Banner title="Welcome!" image="/path/to/banner.jpg" />
+            <div className="cards-container">
+                {cardsData.map((card, index) => (
+                    <Card key={index} {...card} onClick={() => console.log(`Clicked card ${index + 1}`)} />
+                ))}
+            </div>
+        </div>
+    );
+};
 
-export default App
+export default App;
