@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/cards.scss";
+import "../styles/cards.scss";
 
 const Card = ({ title, image, description, onClick }) => (
     <div className="card" onClick={onClick} style={{ cursor: onClick ? "pointer" : "default" }}>
