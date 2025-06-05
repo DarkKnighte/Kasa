@@ -1,2 +1,25 @@
-// @TODO: #3 - Créer la page About (sans forcément intégrer le style et les interactions).
-// @TODO: #5 - Intégrer la page About avec le style et les intéractions.
+import React from 'react';
+import Collapse from '../components/Collapse'; // Exemple d'utilisation du composant Collapse
+import './About.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+
+const About = () => {
+  const aboutData = [
+    { title: "Fiabilité", content: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." },
+    { title: "Respect", content: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." },
+    { title: "Service", content: "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question." },
+    { title: "Sécurité", content: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." }
+  ];
+
+  return (
+    <div className="about-page">
+      {/* Vous pouvez ajouter une bannière ici si nécessaire */}
+      <div className="about-page__collapses">
+        {aboutData.map((item, index) => (
+          <Collapse key={index} title={item.title} content={item.content} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default About;
