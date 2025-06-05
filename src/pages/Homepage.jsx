@@ -4,7 +4,6 @@ import {Link} from "react-router";
 import cards from "../../data.json";
 
 const Homepage = () => {
-    // @TODO: #4 - Intégrer la page d'accueil avec les différents composants et la navigation vers les logements.
     return (
         <div className="cards-container">
             { /* BANNER */ }
