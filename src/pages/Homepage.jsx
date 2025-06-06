@@ -8,7 +8,7 @@ const Homepage = () => {
         <div className="cards-container">
             { /* BANNER */ }
             {cards.map((card) => (
-                <Link key={card.id} to={`/accommodations/${card.id}`}>
+                <Link key={card.id} to={`/lodging/${card.id}`}>
                     <Card {...card} />
                 </Link>
             ))}

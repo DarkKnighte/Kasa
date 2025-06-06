@@ -2,7 +2,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 // import logo from '../assets/logo.png'; // Décommentez si vous avez un logo
+<<<<<<< HEAD
 import '../styles/Header.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+=======
+import './Header.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+>>>>>>> 504a0babafd1665b6116871da3ba89b01006f09a
 
 const Header = () => {
   return (

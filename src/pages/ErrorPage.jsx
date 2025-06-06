@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import '../styles/ErrorPage.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+=======
+import './ErrorPage.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+>>>>>>> 504a0babafd1665b6116871da3ba89b01006f09a
 
 const ErrorPage = () => {
   return (

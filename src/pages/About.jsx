@@ -1,6 +1,10 @@
 import React from 'react';
 import Collapse from '../components/Collapse'; // Exemple d'utilisation du composant Collapse
+<<<<<<< HEAD
 import '../styles/About.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+=======
+import './About.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+>>>>>>> 504a0babafd1665b6116871da3ba89b01006f09a
 
 const About = () => {
   const aboutData = [
