@@ -17,5 +17,3 @@ const CardItem = ({ title, image, description }) => {
 };
 
 export default CardItem;
-
-export const abc = {};
