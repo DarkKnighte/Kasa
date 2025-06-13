@@ -9,8 +9,8 @@ const Header = () => {
     <header className="header">
       {<img src={logo} alt="Kasa Logo" className="header-logo" />}
       <nav className="header-nav">
-        <NavLink to="/" className={({ isActive }) => isActive ? "nav-link nav-link--active" : "nav-link"}>Accueil</NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link nav-link--active" : "nav-link"}>A Propos</NavLink>
+        <NavLink to="/" className="nav-link">Accueil</NavLink>
+        <NavLink to="/about" className="nav-link">A Propos</NavLink>
       </nav>
     </header>
   );
