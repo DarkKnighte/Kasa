@@ -7,6 +7,9 @@ import Lodging from "./pages/Lodging.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import Carousel from "./components/Carousel.jsx";
+
+import trucs from "../data.json";
 
 { /* @TODO: TRAVAILLER LE STYLE SUR TOUT. */ }
 
@@ -23,8 +26,9 @@ const App = () => {
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </main>
-        <Footer />
       </div>
+      <Carousel pictures={trucs[0].pictures} />
+      <Footer />
     </Router>
   );
 };

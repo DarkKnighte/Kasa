@@ -1,6 +1,5 @@
-// @TODO: #7 - Créer le composant Carousel.
 import React, { useState } from 'react';
-import '../styles/Carousel.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+import './Carousel.scss';
 
 const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
