@@ -27,7 +27,6 @@ const App = () => {
           </Routes>
         </main>
       </div>
-      {/* <Carousel pictures={trucs[0].pictures} /> */}
       <Footer />
     </Router>
   );
