@@ -19,6 +19,11 @@ const Lodging = () => {
         {logement.pictures && <Carousel pictures={logement.pictures} />}
         { /* @TODO: Ajouter les détails du logement (avec des composants personnalisées si voulues). */ }
         { /* @TODO: Ajouter la description et les équipements du logement via les collapses. */ }
+      <div className="lodging-page_collapses">
+        <Collapse title={"Description"}><p>{logement.description}</p></Collapse>
+        <Collapse title={"Equipements"}><ul>{logement.equipments.map(equipment => <li key={equipment}>{equipment}</li>)}</ul></Collapse>
+      </div>
+
     </div>
   );
 };

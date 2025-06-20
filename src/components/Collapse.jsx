@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Collapse.scss';
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -17,7 +17,7 @@ const Collapse = ({ title, content }) => {
           ▼
         </span>
       </div>
-      {isOpen && <div className="collapse__content">{typeof content === 'string' ? <p>{content}</p> : content}</div>}
+      {isOpen && <div className="collapse__content">{ children }</div>}
     </div>
   );
 };
