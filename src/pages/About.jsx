@@ -1,6 +1,7 @@
 import React from 'react';
-import Collapse from '../components/Collapse'; // Exemple d'utilisation du composant Collapse
-import './About.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+import Collapse from '../components/Collapse';
+import logo from '../assets/about_banner.png';
+import './About.scss';
 
 const About = () => {
   const aboutData = [
@@ -12,8 +13,15 @@ const About = () => {
 
   return (
     <div className="about-page">
-      {/* Vous pouvez ajouter une bannière ici si nécessaire */}
-      <div className="about-page__collapses">
+      <div className="banner" style={{
+        backgroundImage: `url(${logo})`, 
+        backgroundSize: "cover", 
+        backgroundPosition: "center", 
+        backgroundColor: "rgba(0, 0, 0, 0.3)", 
+        backgroundBlendMode: "darken"}}>
+
+      </div>
+      <div className="about-page_collapses">
         {aboutData.map((item, index) => (
           <Collapse key={index} title={item.title} content={item.content} />
         ))}

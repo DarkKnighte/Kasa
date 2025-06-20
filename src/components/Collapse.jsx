@@ -1,6 +1,5 @@
-// @TODO: #5 - Créer le composant Collapse.
 import React, { useState } from 'react';
-import './Collapse.scss'; // Assurez-vous que ce fichier SCSS existe ou créez-le
+import './Collapse.scss';
 
 const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
