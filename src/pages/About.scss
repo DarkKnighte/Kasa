@@ -1,0 +1,29 @@
+.about-page_collapses {
+    padding: 10px 20px 10px 15px;
+    width: 1023px;
+    justify-self: center;
+
+    p {
+        background-color: #f6f6f6f6;
+        padding: 10px 10px 10px 10px;
+        border-radius: 0px 0px 3px 3px;
+        font-size: 24px;
+    }
+}
+
+.collapse {
+    background-color: #FF6060;
+    border-radius: 5px;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        margin: 0px 9px 50px 15px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
