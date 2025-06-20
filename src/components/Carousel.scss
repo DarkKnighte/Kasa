@@ -1,0 +1,25 @@
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    img{
+        width: 1240px;
+        height: 415px;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+    &__button {
+        color: black;
+        background: none;
+        border: none;
+        font-size: 70px;
+        cursor: pointer;
+        width: 96px;
+        height: 119px;
+    }
+    &__counter {
+        color: black;
+        // background-color: black;
+    }
+}
