@@ -23,7 +23,9 @@ const About = () => {
       </div>
       <div className="about-page_collapses">
         {aboutData.map((item, index) => (
-          <Collapse key={index} title={item.title} content={item.content} />
+            <Collapse key={index} title={item.title}>
+                <p>{item.content}</p>
+            </Collapse>
         ))}
       </div>
     </div>

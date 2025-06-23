@@ -19,7 +19,7 @@ const Homepage = () => {
                 </h1>
             </div>
             <div className="cards-container">    
-                {cards.slice(0, 6).map((card) => (
+                {cards.map((card) => (
                     <Link key={card.id} to={`/lodging/${card.id}`}>
                         <Card {...card} />
                     </Link>
