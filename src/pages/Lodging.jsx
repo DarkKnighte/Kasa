@@ -17,8 +17,7 @@ const Lodging = () => {
   return (
     <div className="lodging-page">
       {logement.pictures && <Carousel pictures={logement.pictures} />}
-      {/* @TODO: Ajouter les détails du logement (avec des composants personnalisées si voulues). */}
-      {/* @TODO: Ajouter la description et les équipements du logement via les collapses. */}
+
       <div className='lodging-page_header'>
         <div className='lodging-page_header_info'>
           <h1 className='lodging-page_header_title'>{logement.title}</h1>
