@@ -5,47 +5,85 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 76px;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 }
 
-.lodging-page_header {
+.lodging-page_container {
     display: flex;
     justify-content: space-between;
+    margin-block: 20px;
 
-    &_info {
-    font-family: "Montserrat", sans-serif;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
     }
 
-    &_title {
-      color: #FF6060;
-      font-weight: 500;
-      margin-bottom: 0;
-    }
-
-    &_location {
-      font-size: 18px;
-      margin-top: 10px;
-      font-weight: 500;
-    }
-
-    &_host {
+    &_information {
       display: flex;
-      align-items: center;
-      margin-top: 20px;
+      flex-direction: column;
+      &_lodging {
+          font-family: "Montserrat", sans-serif;
+          &_title {
+            color: #FF6060;
+            font-weight: 500;
+            margin-bottom: 0;
+          }
 
-      &_name {
-        font-size: 24px;
-        font-weight: 500;
-        color: #FF6060;
+          &_location {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: 500;
+          }
       }
-      &_picture {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-left: 10px;
+      &_tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        &_tag {
+          background-color: #FF6060;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 500;
+          min-width: 115px;
+          text-align: center;
+        }
       }
     }
+
+    &_details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @media screen and (max-width: 768px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &_host {
+        display: flex;
+        align-items: center;
+
+        &_name {
+          font-size: 24px;
+          font-weight: 500;
+          color: #FF6060;
+        }
+        &_picture {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: 10px;
+        }
+      }
+    }
+
 }
 
 .lodging-page_details {
@@ -54,21 +92,5 @@
     align-items: center;
     margin-bottom: 24px;
 
-    &_tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
 
-    &_tag {
-      background-color: #FF6060;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 500;
-      min-width: 115px;
-      text-align: center;
-    }
 }

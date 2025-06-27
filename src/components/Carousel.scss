@@ -2,15 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-size: cover;
+    aspect-ratio: 1240/415;
+    border-radius: 25px;
 
-    img{
-        width: 1240px;
-        height: 415px;
-        border-radius: 25px;
-        object-fit: cover;
-    }
     &__button {
-        color: black;
+        color: white;
         background: none;
         border: none;
         font-size: 70px;
@@ -19,7 +16,9 @@
         height: 119px;
     }
     &__counter {
-        color: black;
-        // background-color: black;
+        font-size: 18px;
+        color: white;
+        align-self: end;
+        padding-bottom: 25px;
     }
 }
