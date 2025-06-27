@@ -1,5 +1,53 @@
-.lodging-page_collapses {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 76px;
+.lodging-page {
+  font-weight: 500;
+
+  &_collapses {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 76px;
+  }
+
+  &_info {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &_title {
+    color: #FF6060;
+    font-weight: 500;
+  }
+
+  &_host {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    &_name {
+      font-size: 24px;
+      font-weight: 500;
+      color: #FF6060;
+    }
+    &_picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 10px;
+    }
+  }
+
+  &_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  &_tag {
+      background-color: #FF6060;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
 }

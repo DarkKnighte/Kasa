@@ -19,6 +19,23 @@ const Lodging = () => {
       {logement.pictures && <Carousel pictures={logement.pictures} />}
       {/* @TODO: Ajouter les détails du logement (avec des composants personnalisées si voulues). */}
       {/* @TODO: Ajouter la description et les équipements du logement via les collapses. */}
+
+      <div className='lodging-page_info'>
+        <h1 className='lodging-page_title'>{logement.title}</h1>
+        <h2 className='lodging-page_location'>{logement.location}</h2>
+      </div>
+
+      <div className='lodging-page_host'>
+        <div className='lodging-page_host_name'>{logement.host.name}</div>
+        <img className='lodging-page_host_picture' src={logement.host.picture} alt={logement.host.name} />
+      </div>
+
+      <div className='lodging-page_tags'>
+        {logement.tags.map(tag => (
+          <span key={tag} className='lodging-page_tag'>{tag}</span>
+        ))}
+      </div>
+
       <div className='lodging-page_stars'>
         <Star rating={logement.rating} />
       </div>
