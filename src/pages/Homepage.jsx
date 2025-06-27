@@ -9,17 +9,17 @@ const Homepage = () => {
     return (
         <div className="container">
             <div className="banner" style={{
-                backgroundImage: `url(${logo})`, 
-                backgroundSize: "cover", 
-                backgroundPosition: "center", 
-                backgroundColor: "rgba(0, 0, 0, 0.6)", 
+                backgroundImage: `url(${logo})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
                 backgroundBlendMode: "darken"}}>
                 <h1 className="banner-title">
                 Chez vous, partout et ailleurs
                 </h1>
             </div>
-            <div className="cards-container">    
-                {cards.slice(0, 6).map((card) => (
+            <div className="cards-container">
+                {cards.map((card) => (
                     <Link key={card.id} to={`/lodging/${card.id}`}>
                         <Card {...card} />
                     </Link>
@@ -28,6 +28,5 @@ const Homepage = () => {
         </div>
     )
     }
-    
+
     export default Homepage;
-    

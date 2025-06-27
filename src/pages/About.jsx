@@ -14,16 +14,18 @@ const About = () => {
   return (
     <div className="about-page">
       <div className="banner" style={{
-        backgroundImage: `url(${logo})`, 
-        backgroundSize: "cover", 
-        backgroundPosition: "center", 
-        backgroundColor: "rgba(0, 0, 0, 0.3)", 
+        backgroundImage: `url(${logo})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
         backgroundBlendMode: "darken"}}>
 
       </div>
       <div className="about-page_collapses">
         {aboutData.map((item, index) => (
-          <Collapse key={index} title={item.title} content={item.content} />
+            <Collapse key={index} title={item.title}>
+                <p>{item.content}</p>
+            </Collapse>
         ))}
       </div>
     </div>

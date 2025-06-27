@@ -23,7 +23,7 @@ const Carousel = ({ pictures }) => {
   const showControls = pictures.length > 1;
 
   return (
-    <div className="carousel">
+    <div className="carousel" >
       {showControls && <button onClick={goToPrevious} className="carousel__button carousel__button--prev" aria-label="Image précédente">&#10094;</button>}
       <img src={pictures[currentIndex]} alt={`Logement ${currentIndex + 1}`} className="carousel__image" />
       {showControls && <button onClick={goToNext} className="carousel__button carousel__button--next" aria-label="Image suivante">&#10095;</button>}

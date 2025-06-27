@@ -10,6 +10,7 @@ function Star({ rating }) {
             key={i}
             src={i <= rating ? fullStar : emptyStar}
             alt={i <= rating ? 'étoile pleine' : 'étoile vide'}
+            className="star"
             />
         );
     }
