@@ -17,5 +17,8 @@
         align-self: flex-end;
         margin: 24px;
         font-size: 18px;
+        @media screen and (max-width: 768px) {
+          visibility: hidden;
+        }
     }
 }
