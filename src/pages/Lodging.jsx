@@ -17,30 +17,32 @@ const Lodging = () => {
   return (
     <div className="lodging-page">
       {logement.pictures && <Carousel pictures={logement.pictures} />}
-
-      <div className='lodging-page_header'>
-        <div className='lodging-page_header_info'>
-          <h1 className='lodging-page_header_title'>{logement.title}</h1>
-          <h2 className='lodging-page_header_location'>{logement.location}</h2>
-        </div>
-
-        <div className='lodging-page_header_host'>
-          <div className='lodging-page_header_host_name'>{logement.host.name}</div>
-          <img className='lodging-page_header_host_picture' src={logement.host.picture} alt={logement.host.name} />
-        </div>
+      {/* @TODO: Ajouter les détails du logement (avec des composants personnalisées si voulues). */}
+      {/* @TODO: Ajouter la description et les équipements du logement via les collapses. */}
+      <div className='lodging-page_container'>
+          <div className='lodging-page_container_information'>
+              <div className='lodging-page_container_information_lodging'>
+                  <h1 className='lodging-page_container_information_lodging_title'>{logement.title}</h1>
+                  <h2 className='lodging-page_container_information_lodging_location'>{logement.location}</h2>
+              </div>
+              <div className='lodging-page_container_information_tags'>
+                  {logement.tags.map(tag => (
+                      <span key={tag} className='lodging-page_container_information_tags_tag'>{tag}</span>
+                  ))}
+              </div>
+          </div>
+          <div className='lodging-page_container_details'>
+              <div className='lodging-page_container_details_host'>
+                  <div className='lodging-page_container_details_host_name'>{logement.host.name}</div>
+                  <img className='lodging-page_container_details_host_picture' src={logement.host.picture} alt={logement.host.name} />
+              </div>
+              <div className='lodging-page_container_details_rating'>
+                  <Star rating={logement.rating} />
+              </div>
+          </div>
       </div>
 
-      <div className='lodging-page_details'>
-        <div className='lodging-page_details_tags'>
-          {logement.tags.map(tag => (
-            <span key={tag} className='lodging-page_details_tag'>{tag}</span>
-          ))}
-        </div>
 
-        <div className='lodging-page_details_stars'>
-          <Star rating={logement.rating} />
-        </div>
-      </div>
 
       <div className="lodging-page_collapses">
         <Collapse title={"Description"}><p>{logement.description}</p></Collapse>

@@ -3,14 +3,8 @@
     align-items: center;
     justify-content: space-between;
 
-    img{
-        min-width: 1240px;
-        height: 415px;
-        border-radius: 25px;
-        object-fit: cover;
-    }
     &__button {
-        color: black;
+        color: white;
         background: none;
         border: none;
         font-size: 70px;
@@ -19,7 +13,10 @@
         height: 119px;
     }
     &__counter {
-        color: black;
+        color: white;
+        align-self: flex-end;
+        margin: 24px;
+        font-size: 18px;
         // background-color: black;
     }
 }

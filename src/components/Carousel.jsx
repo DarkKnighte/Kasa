@@ -23,11 +23,10 @@ const Carousel = ({ pictures }) => {
   const showControls = pictures.length > 1;
 
   return (
-    <div className="carousel" >
+    <div className="carousel" style={{ backgroundImage: `url(${pictures[currentIndex]})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '415px', borderRadius: '25px' }}>
       {showControls && <button onClick={goToPrevious} className="carousel__button carousel__button--prev" aria-label="Image précédente">&#10094;</button>}
-      <img src={pictures[currentIndex]} alt={`Logement ${currentIndex + 1}`} className="carousel__image" />
-      {showControls && <button onClick={goToNext} className="carousel__button carousel__button--next" aria-label="Image suivante">&#10095;</button>}
       {showControls && <div className="carousel__counter">{currentIndex + 1}/{pictures.length}</div>}
+      {showControls && <button onClick={goToNext} className="carousel__button carousel__button--next" aria-label="Image suivante">&#10095;</button>}
     </div>
   );
 };
