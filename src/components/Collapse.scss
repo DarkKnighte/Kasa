@@ -20,6 +20,17 @@
     margin: 0;
     background-color: #f6f6f6f6;
     padding: 10px 10px 10px 10px;
-    font-size: 24px;
+    font-size: 20px;
   }
+
+  &__icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+    margin-right: 12px;
+  }
+
+  &__icon--open {
+    transform: rotate(0deg);
+  }
+
 }
