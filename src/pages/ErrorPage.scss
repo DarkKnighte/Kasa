@@ -13,15 +13,7 @@
       font-size: 288px;
       color: #FF6060;
       margin-bottom: 113px;
-      @media screen and (max-width: 768px) {
-        font-size: 196px;
-      }
-      @media screen and (max-width: 668px) {
-        font-size: 126px;
-      }
-      @media screen and (max-width: 568px) {
-        font-size: 96px;
-      }
+      font-size: clamp(96px, 25vw, 288px);
     }
 
     &-message {

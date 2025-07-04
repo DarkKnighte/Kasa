@@ -5,4 +5,11 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    width: clamp(300px, 95vw, 1023px);
+
+      // @media screen and (max-width: 568px) {
+      //   width: 100vw;
+      //   padding-left: 10px;
+      //   padding-right: 10px;
+      // }
 }
