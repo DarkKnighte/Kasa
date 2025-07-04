@@ -3,17 +3,31 @@
   flex-direction: column;
   align-items: center;
 
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+
     &-title {
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
       font-size: 288px;
       color: #FF6060;
+      margin-bottom: 113px;
+      @media screen and (max-width: 768px) {
+        font-size: 196px;
+      }
+      @media screen and (max-width: 668px) {
+        font-size: 126px;
+      }
+      @media screen and (max-width: 568px) {
+        font-size: 96px;
+      }
     }
 
     &-message {
       color: #FF6060;
       font-size: 36px;
-      margin-bottom: 50px;
+      margin-bottom: 113px;
     }
 
     &-link {
