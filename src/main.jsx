@@ -9,9 +9,3 @@ createRoot(document.getElementById("root")).render(
     <App />
   </StrictMode>,
 );
-
-ReactDOM.createRoot(root).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-);
