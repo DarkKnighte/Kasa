@@ -9,6 +9,7 @@ import './Lodging.scss';
 const Lodging = () => {
   const { id } = useParams();
   const logement = logements.find(logement => logement.id === id);
+  const [first,last] = logement.host.name.split(" ");
 
   if (!logement) {
     return <Navigate to="/404" replace />;
@@ -17,8 +18,6 @@ const Lodging = () => {
   return (
     <div className="lodging-page">
       {logement.pictures && <Carousel pictures={logement.pictures} />}
-      {/* @TODO: Ajouter les détails du logement (avec des composants personnalisées si voulues). */}
-      {/* @TODO: Ajouter la description et les équipements du logement via les collapses. */}
       <div className='lodging-page_container'>
           <div className='lodging-page_container_information'>
               <div className='lodging-page_container_information_lodging'>
@@ -33,7 +32,7 @@ const Lodging = () => {
           </div>
           <div className='lodging-page_container_details'>
               <div className='lodging-page_container_details_host'>
-                  <div className='lodging-page_container_details_host_name'>{logement.host.name}</div>
+                  <div className='lodging-page_container_details_host_name'>{first} <br/> {last}</div>
                   <img className='lodging-page_container_details_host_picture' src={logement.host.picture} alt={logement.host.name} />
               </div>
               <div className='lodging-page_container_details_rating'>
